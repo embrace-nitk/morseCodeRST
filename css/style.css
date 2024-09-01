@@ -1,0 +1,238 @@
+/*mathstyle.css*/
+span.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+span.frac > sup,
+span.frac > sub {
+  display: block;
+  font: inherit;
+  padding: 0 0.3em;
+}
+span.frac > sup {
+  border-bottom: 0.08em solid;
+}
+span.frac > span {
+  display: none;
+}
+
+#simscreen {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 600px;
+  width: 800px;
+  border: solid 1px;
+}
+
+#title {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  background-color: black;
+  font-family: verdana;
+  color: White;
+  text-transform: uppercase;
+}
+
+#title h3 {
+  padding-top: 2px;
+  margin: 0px;
+}
+
+.simsubscreen {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  height: 530px;
+  width: 745px;
+}
+
+.incanvas {
+  margin: 5px 0 0 5px;
+  padding: 0;
+}
+
+#nextButton {
+  position: absolute;
+  left: 750px;
+  top: 530px;
+  cursor: pointer;
+}
+
+.circlebg {
+  border-radius: 100%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: #000;
+}
+
+.steptext {
+  display: inline;
+  font-size: 14px;
+}
+
+#copyright {
+  position: absolute;
+  left: 280px;
+  top: 580px;
+  font-size: 12px;
+}
+#human {
+  position: absolute;
+  left: 25%;
+}
+.readable {
+  position: absolute;
+  left: 8rem;
+  top: 10rem;
+  font-weight: 600;
+  height: 30px;
+  width: 150px;
+  border: #000 solid;
+}
+.signalStrength {
+  position: absolute;
+  left: 19rem;
+  top: 10rem;
+  border: #000 solid;
+  font-weight: 600;
+  height: 30px;
+  width: 150px;
+}
+.tone {
+  position: absolute;
+  left: 30rem;
+  top: 10rem;
+  border: #000 solid;
+  font-weight: 600;
+  height: 30px;
+  width: 80px;
+}
+.submit1 {
+  position: absolute;
+  left: 20.5rem;
+  top: 22rem;
+  height: 2rem;
+  background: #979494;
+  border-radius: 10%;
+  text-decoration: #fff;
+  cursor: pointer;
+}
+
+.rst {
+  position: absolute;
+
+  top: 5rem;
+  border: 2px solid black;
+  height: 8%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: Arial;
+  font-size: 125%;
+}
+.pd {
+  position: absolute;
+  left: 220px;
+  top: 255px;
+  text-align: justify;
+}
+.pd2 {
+  position: absolute;
+
+  top: 255px;
+  text-align: justify;
+}
+.pd3 {
+  position: absolute;
+  left: 450px;
+  top: 255px;
+  text-align: justify;
+  height: 100px;
+  width: 200px;
+  size: 10rem;
+}
+.read {
+  position: absolute;
+  left: 155px;
+  top: 148px;
+  font-style: bold;
+  font-weight: 600;
+}
+#signalS1 {
+  position: absolute;
+  left: 155px;
+  top: 184px;
+  font-style: bold;
+  font-weight: 600;
+}
+#toneT1 {
+  position: absolute;
+  left: 155px;
+  top: 225px;
+  font-style: bold;
+  font-weight: 600;
+}
+.rd1 {
+  position: absolute;
+  left: 140px;
+  top: 148px;
+  font-weight: 600;
+}
+.sg1 {
+  position: absolute;
+  left: 140px;
+  top: 184px;
+  font-weight: 600;
+}
+.tn1 {
+  position: absolute;
+  left: 140px;
+  top: 225px;
+  font-weight: 600;
+}
+.toner {
+  position: absolute;
+
+  top: 225px;
+}
+#error {
+  position: absolute;
+  left: 14rem;
+  top: 250px;
+  font-size: 100%;
+  color: red;
+  font-weight: 600;
+}
+.signalC {
+  position: absolute;
+
+  top: 184px;
+  font-weight: 600;
+}
+.readC {
+  position: absolute;
+
+  top: 148px;
+  font-weight: 600;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 50%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta 	 charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<script type="text/javascript" src="js/script.js"></script>
+<style>
+.popup
+{
+	border-radius:5px;
+	background-color:black;
+	color:white;
+	padding:5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  left:102px;
+  visibility: hidden;
+  width: 550px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+ /*text-align:center; */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>Readable SignalStrength Tone
+</h3></div>
+
+<div class="simsubscreen" id="canvas0" >
+	<h4 class="incanvas">Objective:</h4>
+	<p class="incanvas" style="font-size:14px;">To acquire RST signal strength and display. 
+	</p><br/>
+    <h4 class="incanvas">Discription:</h4>
+    <p  class="pd1" style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;">The RST reporting system is based around three numbers. One is for Readability (R), one is for Strength (S), and one is for Tone (T). The tone is only used for Morse code transmissions.</p>
+
+<p style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;">The R-S-T system is used by amateur radio operators, shortwave listeners, and other radio hobbyists to exchange information about the quality of a radio signal being received. The code is a three digit number, with one digit each for conveying an assessment of the signal's readability, strength, and tone.[1][2] The code was developed in 1934 by Amateur radio operator Arthur W. Braaten, W2BSR,[3][4][5][6] and was similar to that codified in the ITU Radio Regulations, Cairo, 1938
+
+</p>
+<p  style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;"><b>Signal Strength (S)</b>: This indicates the strength or power level of the received signal. It is typically graded on a scale from 1 to 9, with 1 being an extremely weak signal and 9 being an extremely strong signal.</p>	
+<p  style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;"><b>Tone (T)</b>: This refers to the presence or absence of any interference or undesired tones in the signal. It is usually given as a letter, such as "N" for no interference or "I" for interference.</p>
+<p  style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;"><b>Readability (R)</b>: This assesses how easily the transmitted information can be understood. It is often graded on a scale from 1 to 5, where 1 is barely readable and 5 is perfectly readable.</p>
+<!-- <ul class="pd2">
+	<li>R1 Unreadable</li>
+	
+	<li>R2 Barely readable</li>
+	
+	<li>R3 Readable with <br>difficulty</li>
+	
+	<li>R4 Readable with <br> little difficulty</li>
+	
+	<li>R5 Perfectly readable</li>
+</ul>	
+
+<ul class="pd">
+	<li>S1 Faint—signals barely ,<BR>perceptible</li>
+	
+	<li>S2 Very weak signals</li>
+	
+	<li>S3 Weak signals</li>
+	
+	<li>S4 Fair signals</li>
+	
+	<li>S5 Fairly good signals</li>
+
+	<li>S6 Good signals</li>
+
+	<li>S7 Moderately strong signals</li>
+
+	<li>S8 Strong signals</li>
+
+	<li>S9 Extremely strong signals</li>
+</ul>
+<ul class="pd3">
+	<li>T1 Sixty-cycle ac or less, very
+		rough and broad.</li>
+	
+	<li>T2 . Very rough ac, very harsh and
+		broad</li>
+	
+	<li>T3 Rough ac tone, rectified but
+		not filtered</li>
+	
+	<li>T4 Rough note, some trace of
+		filtering
+		</li>
+	
+	<li>T5 Filtered rectified ac but
+		strongly ripple-modulated</li>
+
+	<li>T6 Filtered tone, definite trace of
+		ripple modulation</li>
+
+	<li>T7 . Near pure tone, trace of ripple
+		modulation
+		</li>
+
+	<li>T8 Near perfect tone, slight trace
+		of modulation</li>
+
+	<li>T9 Perfect tone, no trace of ripple
+		or modulation of any kind</li>
+</ul> -->
+
+
+
+<!-- <img src="images/human.png" id="human"> -->
+</div>
+
+<div id="nav">
+	
+	<img id="nextButton" onclick="navNext()" src="images/Next.png" alt="" /></a>
+
+</div>
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;1&nbsp;</span>
+	<p class="steptext">&nbsp;Select RST values.(using the DROPDOWM MENU)</p>
+	<select id="readable1" class="readable" >
+		<option value="r">R(Readable)</option>
+		<option value="R1">1</option>
+	  <option value="R2">2</option>
+	  <option value="R3">3</option>
+	  <option value="R4">4</option>
+	  <option value="R5">5</option>
+  
+  
+	</select>
+
+
+	<select id="signalStrength1" class="signalStrength" aria-placeholder="">
+		<option value="s">S(signal Strength)</option>
+		<option value="S1">1</option>
+	  <option value="S2">2</option>
+	  <option value="S3">3</option>
+	  <option value="S4">4</option>
+	  <option value="S5">5</option>
+  	  <option value="S6">6</option>
+	  <option value="S7">7</option>
+	  <option value="S8">8</option>
+	  <option value="S9">9</option>
+  
+	</select>
+
+	<select id="tone1"  class="tone" aria-placeholder="">
+      <option value="t">T(Tone)</option>
+	  <option value="T1">1</option>
+	  <option value="T2">2</option>
+	  <option value="T3">3</option>
+	  <option value="T4">4</option>
+	  <option value="T5">5</option>
+	  <option value="T6">6</option>
+	  <option value="T7">7</option>
+	  <option value="T8">8</option>
+	  <option value="T9">9</option>
+  
+	</select>
+
+
+<p id="error"></p>
+	<button type="submit" id="subMit" class="submit1" onclick="message()">Submit</button>
+</div>
+
+	<!-- style="padding: 5px;padding-top: 7px;padding-bottom: 7px;" -->
+
+	<!-- <label for="character">Select the syntax:</label> -->
+	
+	
+	<!-- <p id="warningMessage" class="warning" style="color: red;"></p> -->
+	
+
+</div>
+   <div class="simsubscreen" id="canvas2" name="canvas2" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;2&nbsp;</span>
+	<p class="steptext">&nbsp;Display of the selected output.
+	<br><br><br><br><br><br>
+ 
+	<p class="rst" id="RST"></p>
+&nbsp;
+
+	<p class="readC">Readability</p>
+	<p class="rd1">:</p>
+	<p id="readR1" class="read"></p>
+
+
+	<p class="signalC">Signal strength</p>
+	<p class="sg1">:</p>
+	<p id="signalS1"></p>
+
+
+	<p class="toner" style="font-weight: 600;" >Tone</p>
+	<p class="tn1">:</p>
+	<p id="toneT1"></p>
+		
+</div>
+
+
+
+
+
+
+
+
+<img class ="" id="arrow1" style="visibility:hidden;"/>
+
+<div id="copyright"> &copy; EMBRACE - NITK <script>document.write(new Date().getFullYear())</script></div>
+</div>
+</body> 
+</html>
